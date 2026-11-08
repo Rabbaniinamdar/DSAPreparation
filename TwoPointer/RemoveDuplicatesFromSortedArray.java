@@ -34,7 +34,6 @@
  * extra space."
  */
 
-package DSAPreparation.TwoPointer;
 public class RemoveDuplicatesFromSortedArray {
 
     public static int removeDuplicates(int[] nums) {

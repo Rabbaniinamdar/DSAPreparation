@@ -1,4 +1,3 @@
-package DSAPreparation.TwoPointer;
 import java.util.Arrays;
 
 /**
