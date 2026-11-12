@@ -1,0 +1,38 @@
+class Palindrome {
+    public boolean isPalindrome(String S) {
+        
+        int left = 0;
+        int right = S.length() - 1;
+
+        while (left < right) {
+            char leftChar = S.charAt(left);
+            char rightChar = S.charAt(right);
+
+            if (!Character.isLetterOrDigit(leftChar)) {
+                left++;
+                continue;
+            }
+            
+            if (!Character.isLetterOrDigit(rightChar)) {
+                right--;
+                continue;
+            }
+
+            
+            if (Character.toLowerCase(leftChar) != Character.toLowerCase(rightChar)) {
+                return false;
+            }
+
+            left++;
+            right--;
+        }
+
+        return true; 
+    }
+    public static void main(String[] args) {
+        Palindrome obj = new Palindrome();
+        String s = "A man, a plan, a canal: Panama";
+        boolean result = obj.isPalindrome(s);
+        System.out.println("Is the string a palindrome? " + result);
+    }
+}
